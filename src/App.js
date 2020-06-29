@@ -1,9 +1,11 @@
 import React from 'react';
 import {observer} from 'mobx-react';
-import './App.css';
+// import './App.css';
 import UserStore from './stores/UserStore';
-import LoginForm from './LoginForm';
-import SubmitButton from './SubmitButton';
+import LoginForm from './pages/LoginForm';
+import SubmitButton from './components/SubmitButton';
+import Appointment from "./pages/Appointment";
+import AppointmentContainer from "./containers/AppointmentContainer";
 
 
 class App extends React.Component {
@@ -86,7 +88,9 @@ class App extends React.Component {
             return (
                 <div className="app">
                     <div className='container'>
-                        <LoginForm/>
+                        {/*<Appointment />*/}
+                        <AppointmentContainer />
+                        {/*<LoginForm/>*/}
                     </div>
                 </div>
             );
